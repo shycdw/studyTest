@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<com.david.study.view3.StickyLayout
+        android:id="@+id/stick"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/github"/>
+
+        <com.david.study.view3.PinnedHeaderExpandableListView
+            android:id="@+id/elv_test"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.david.study.view3.StickyLayout>-->
+
+    <com.david.study.view.MultiLauncher
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+    </com.david.study.view.MultiLauncher>
+
+    <!--<com.david.study.FixedLayout
+        android:id="@+id/fixedLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:column_spacing="@dimen/aa"
+        app:line_spacing="@dimen/bb"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="值"
+        android:onClick="getItems"/>-->
+
+</LinearLayout>

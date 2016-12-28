@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="pref_first_preferencescreen_key"
+    android:title="Preferences">
+    <!-- 为Preference指定android：key，通过该属性，可以检索Preference对象 -->
+
+    <!-- PreferenceCategory属性可以为Preference分组，并指定分组名 -->
+    <PreferenceCategory
+        android:title="User">
+
+        <!-- 选择用户名，需要使用EditTextPreference控件。指定summary属性的默认值，
+        当用户指定用户名后，该默认值会被替换 -->
+        <EditTextPreference
+            android:key="pref_username"
+            android:summary="Username"
+            android:title="Username"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Application">
+        <Preference
+            android:key="pref_data"
+            android:summary="Rate the app in the store!"
+            android:title="Rate the app" />
+        <Preference
+            android:key="pref_share"
+            android:summary="Share the app with your friends"
+            android:title="Share it"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SliderMenu">
+        <!-- 侧边栏宽度 -->
+        <attr name="sliding_width" format="dimension" />
+        <!-- 分割线宽度 -->
+        <attr name="separator" format="dimension" />
+        <!-- 手指滑动感应温度 -->
+        <attr name="touch_width" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="SlidingMenu">
+        <attr name="right_padding" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="SimpleTabStripView">
+        <attr name="visible_tabs_count" format="integer" />
+        <attr name="titles" format="reference" />
+        <attr name="selected_txt_color" format="color" />
+        <attr name="unselected_txt_color" format="color" />
+        <attr name="underline_color" format="color" />
+        <attr name="tab_selected_bg" format="color" />
+        <attr name="underline_height" format="dimension" />
+        <attr name="tab_txt_size" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="FixedLayout">
+        <attr name="line_spacing" format="dimension" />
+        <attr name="column_spacing" format="dimension" />
+    </declare-styleable>
+</resources>

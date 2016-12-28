@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<com.david.study.company.WaveView
+        android:id="@+id/waveView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />-->
+    <!--<include layout="@layout/layout_header"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"/>-->
+    <!--<ViewStub
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/layout_header"
+        android:inflatedId="@+id/textView"/>-->
+
+    <ListView
+        android:id="@+id/lv_test"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/l11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:onClick="test"
+                android:background="#FF00FF00"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="200dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.david.study.view.MyListView
+                    android:id="@+id/lv_test"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_test1"
+                    android:layout_width="400dp"
+                    android:layout_height="400dp"
+                    android:background="#FFFF0000"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>-->
+
+</LinearLayout>

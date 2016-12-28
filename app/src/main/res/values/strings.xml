@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Study</string>
+    <array name="test">
+        <item>测试1</item>
+        <item>测试2</item>
+    </array>
+</resources>
