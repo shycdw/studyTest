@@ -1,13 +1,16 @@
-package com.david.study;
+package com.david.study.view3;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.david.study.R;
 
 import java.util.List;
 
@@ -28,7 +31,7 @@ public class FixedLayout extends ViewGroup {
 
     private List<String> mItems;    // 内容
 
-    private String mSelectedContent = "";    //选中的值
+    private OnItemSelectedChangeListener mOnItemSelectedChangeListener;
 
     public FixedLayout(Context context) {
         this(context, null);
@@ -48,25 +51,26 @@ public class FixedLayout extends ViewGroup {
     //---------------------------------------华丽的分割线-----------------------------------------//
     // 请在此华丽的分割线内完成自定义的内容，若是以后想写别的，可以考虑用策略模式实现
 
-    public String getSelectedContent() {
-        return mSelectedContent;
-    }
-
     public void setItem(List<String> items) {
         this.mItems = items;
         updateItem();
-        setChecked(0);
+        if (mItems != null && mItems.size() >= 1) {
+            setChecked(0);
+        }
     }
 
     /**
      * 设置某个位置的item为选中状态
      * @param index list中的位置
      */
-    private void setChecked(int index) {
+    public void setChecked(int index) {
         if (mItems != null && index < mItems.size()) {
             restoreAllItems();
             checked(index);
-            mSelectedContent = mItems.get(index);
+            if (mOnItemSelectedChangeListener != null) {
+                mOnItemSelectedChangeListener.onItemSelected(index);
+                Log.i(TAG, String.valueOf(index));
+            }
         }
     }
 
@@ -84,7 +88,7 @@ public class FixedLayout extends ViewGroup {
             View view = getChildAt(i);
             if (view instanceof TextView) {
                 ((TextView) view).setTextColor(Color.parseColor("#DE000000"));
-                view.setBackgroundResource(R.drawable.shape_bg_white_border_gray);
+                view.setBackgroundResource(R.drawable.shape_bg_white_border_gray_corner);
             }
         }
     }
@@ -103,7 +107,6 @@ public class FixedLayout extends ViewGroup {
                 textView.setOnClickListener(new OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        mSelectedContent = content;
                         setChecked(temp);
                     }
                 });
@@ -118,7 +121,7 @@ public class FixedLayout extends ViewGroup {
      * @param content text
      */
     private TextView getTextView(String content) {
-        int padding = dp2px(getContext(), 16);
+        int padding = dp2px(getContext(), 8);
         TextView textView = new TextView(getContext());
         textView.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
         textView.setPadding(padding, padding, padding, padding);
@@ -139,6 +142,25 @@ public class FixedLayout extends ViewGroup {
     public static int dp2px(Context context, float dpVal) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
                 dpVal, context.getResources().getDisplayMetrics());
+    }
+
+    public void setOnItemSelectedChangeListener(OnItemSelectedChangeListener listener) {
+        this.mOnItemSelectedChangeListener = listener;
+        updateItem();
+        if (mItems != null && mItems.size() > 0) {
+            setChecked(0);
+        }
+    }
+
+    /**
+     * 当item选中时回调的监听器
+     */
+    public interface OnItemSelectedChangeListener {
+        /**
+         * 被选中的位置回调
+         * @param position 选中位置
+         */
+        void onItemSelected(int position);
     }
 
     //---------------------------------------华丽的分割线-----------------------------------------//
