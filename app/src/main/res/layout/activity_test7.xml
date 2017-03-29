@@ -41,7 +41,7 @@
 
     </com.david.study.view.MultiLauncher>
 
-    <!--<com.david.study.FixedLayout
+    <!--<com.david.study.view3.FixedLayout
         android:id="@+id/fixedLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
