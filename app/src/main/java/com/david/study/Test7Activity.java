@@ -1,17 +1,12 @@
 package com.david.study;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.david.study.view3.PinnedHeaderExpandableListView;
-import com.david.study.view3.StickyLayout;
+import com.david.study.view3.FixedLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,7 +52,7 @@ public class Test7Activity extends AppCompatActivity {
             }
             child.add(l);
         }
-        final PinnedHeaderExpandableListView elv_test = (PinnedHeaderExpandableListView) findViewById(R.id.elv_test);
+        /*final PinnedHeaderExpandableListView elv_test = (PinnedHeaderExpandableListView) findViewById(R.id.elv_test);
         elv_test.setAdapter(new BaseExpandableListAdapter() {
             @Override
             public int getGroupCount() {
@@ -131,8 +126,8 @@ public class Test7Activity extends AppCompatActivity {
             public void updatePinnedHeader(int firstVisibleGroup) {
                 textView.setText(elv_test.getExpandableListAdapter().getGroup(firstVisibleGroup).toString());
             }
-        });
-        StickyLayout stick = (StickyLayout) findViewById(R.id.stick);
+        });*/
+        /*StickyLayout stick = (StickyLayout) findViewById(R.id.stick);
         stick.setOnGiveUpTouchListener(new StickyLayout.OnGiveUpTouchListener() {
             @Override
             public boolean giveUpTouchEvent() {
@@ -144,11 +139,7 @@ public class Test7Activity extends AppCompatActivity {
                 }
                 return false;
             }
-        });
-    }
-
-    public void getItems(View view) {
-        Log.i("TAG", fixedLayout.getSelectedContent());
+        });*/
     }
 
 }
