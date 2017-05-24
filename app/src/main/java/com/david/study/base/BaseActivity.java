@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.david.study.app.ActivityCollector;
+import com.david.study.dialog.ProgressLoadingDialog;
 import com.david.study.ui.view.IBaseView;
 
 /**
@@ -20,7 +21,7 @@ import com.david.study.ui.view.IBaseView;
 
 public abstract class BaseActivity extends AppCompatActivity implements IBaseView {
 
-    private ProgressDialog mProgressDialog; // 进度dialog
+    private ProgressLoadingDialog mProgressLoadingDialog; // 进度dialog
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,10 +68,10 @@ public abstract class BaseActivity extends AppCompatActivity implements IBaseVie
      */
     @Override
     public void showLoading() {
-        if (null == mProgressDialog) {
-            mProgressDialog = new ProgressDialog(this);
+        if (null == mProgressLoadingDialog) {
+            mProgressLoadingDialog = new ProgressLoadingDialog.Builder(this).build();
         }
-        mProgressDialog.show();
+        mProgressLoadingDialog.show();
     }
 
     /**
@@ -78,8 +79,8 @@ public abstract class BaseActivity extends AppCompatActivity implements IBaseVie
      */
     @Override
     public void hideLoading() {
-        if (null != mProgressDialog) {
-            mProgressDialog.dismiss();
+        if (null != mProgressLoadingDialog) {
+            mProgressLoadingDialog.dismiss();
         }
     }
 

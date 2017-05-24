@@ -35,4 +35,12 @@
         <item name="android:backgroundDimEnabled">false</item>
     </style>
 
+    <!-- 无标题、无双重白色背景、内容居中的dialog,一般使用Theme.Holo.Dialog为默认主题，灰白色的进度条 -->
+    <style name="AppTheme.Dialog.NoTitleAndBackGround" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
 </resources>

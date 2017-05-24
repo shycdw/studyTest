@@ -24,13 +24,14 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.david.study.R;
+import com.david.study.base.BaseActivity;
 
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class MediaActivity extends AppCompatActivity {
+public class MediaActivity extends BaseActivity {
 
     /*MediaPlayer mMediaPlayer;*/
 
@@ -100,6 +101,22 @@ public class MediaActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }*/
+        showLoading();
+    }
+
+    @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected void initEvent() {
+
+    }
+
+    @Override
+    protected void initData() {
+
     }
 
     private boolean show;
