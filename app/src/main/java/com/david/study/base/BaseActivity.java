@@ -1,6 +1,5 @@
 package com.david.study.base;
 
-import android.app.ProgressDialog;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
