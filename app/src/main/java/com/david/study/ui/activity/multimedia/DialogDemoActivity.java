@@ -1,12 +1,6 @@
 package com.david.study.ui.activity.multimedia;
 
 import android.os.Bundle;
-import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.TextUtils;
-import android.text.style.ForegroundColorSpan;
-import android.view.View;
-import android.widget.Toast;
 
 import com.david.study.R;
 import com.david.study.base.BaseActivity;
