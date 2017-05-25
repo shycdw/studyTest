@@ -1,0 +1,42 @@
+package com.david.study.ui.activity.multimedia;
+
+import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.TextUtils;
+import android.text.style.ForegroundColorSpan;
+import android.view.View;
+import android.widget.Toast;
+
+import com.david.study.R;
+import com.david.study.base.BaseActivity;
+
+/**
+ * 自定义dialog范例
+ * Created by DavidChen on 2017/5/25.
+ */
+
+public class DialogDemoActivity extends BaseActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.dialog_demo);
+        showLoading();
+    }
+
+    @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected void initEvent() {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+}

@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.0"
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
 
     defaultConfig {
         applicationId "com.david.study"
@@ -10,6 +10,10 @@ android {
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
+        ndk {
+            moduleName = "JNITest"
+            abiFilters "x86", "armeabi", "armeabi-v7a"
+        }
     }
     buildTypes {
         release {
@@ -21,10 +25,12 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.1.1'
     compile files('libs/gson-2.2.4.jar')
     compile files('libs/nineoldandroids-2.4.0.jar')
     compile files('libs/okhttp-3.4.1.jar')
     compile files('libs/okio-1.9.0.jar')
+    compile files('libs/universal-image-loader-1.9.5.jar')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
 }

@@ -17,7 +17,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Test8Activity"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Test6Activity"
             android:theme="@style/test_theme" />
@@ -35,12 +35,15 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".ui.activity.multimedia.MediaActivity">
+        <activity android:name=".ui.activity.multimedia.MediaActivity" />
+
+        <activity android:name=".ui.activity.multimedia.DialogDemoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -49,7 +52,7 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"></meta-data>
+                android:resource="@xml/file_paths" />
         </provider>
     </application>
 

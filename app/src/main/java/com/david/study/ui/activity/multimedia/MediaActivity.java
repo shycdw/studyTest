@@ -101,7 +101,6 @@ public class MediaActivity extends BaseActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }*/
-        showLoading();
     }
 
     @Override
