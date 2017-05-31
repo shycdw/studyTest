@@ -49,7 +49,7 @@
     </declare-styleable>
 
     <declare-styleable name="ScrollCircleView">
-        <attr name="stroke_color" format="color" />
-        <attr name="stroke_size" format="float" />
+        <attr name="scv_stroke_color" format="color" />
+        <attr name="scv_stroke_size" format="float" />
     </declare-styleable>
 </resources>

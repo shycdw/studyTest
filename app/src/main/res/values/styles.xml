@@ -9,6 +9,18 @@
         <item name="android:windowAnimationStyle">@style/OpenCloseAnimation</item>
     </style>
 
+    <!-- Base application theme.Theme.AppCompat.Light.DarkActionBar -->
+    <style name="AppTheme_FullScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/OpenCloseAnimation</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+        <!--<item name="android:windowFullscreen">true</item>-->
+    </style>
+
     <style name="PopupAnimation" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
         <item name="android:windowExitAnimation">@anim/push_bottom_out</item>

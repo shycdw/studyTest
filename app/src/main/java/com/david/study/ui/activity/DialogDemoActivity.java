@@ -1,4 +1,4 @@
-package com.david.study.ui.activity.multimedia;
+package com.david.study.ui.activity;
 
 import android.os.Bundle;
 

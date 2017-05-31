@@ -47,8 +47,8 @@ public class ScrollCircleView extends View {
     public ScrollCircleView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.ScrollCircleView);
-        int strokeColor = ta.getColor(R.styleable.ScrollCircleView_stroke_color, DEFAULT_STROKE_COLOR);
-        mStrokeWidth = ta.getFloat(R.styleable.ScrollCircleView_stroke_size, -1);
+        int strokeColor = ta.getColor(R.styleable.ScrollCircleView_scv_stroke_color, DEFAULT_STROKE_COLOR);
+        mStrokeWidth = ta.getFloat(R.styleable.ScrollCircleView_scv_stroke_size, -1);
         ta.recycle();
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setColor(strokeColor);
